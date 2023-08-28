@@ -4,16 +4,16 @@ import Header from "../components/header"; // Correct the capitalization and fil
 import Footer from "../components/footer"; // Correct the capitalization and file name if needed
 import { useRouter } from 'next/router';
 
-
 export default function Home() {
   const router = useRouter();
 
   // Function to navigate to the specified page
-  const navigateToPage = (page) => {
+  const navigateToPage = (page: string) => { // Explicitly specify the type as string
     router.push(page);
   };
 
   return (
+
     <div className="container">
       <Head>
         <title>FitPlanPro</title>

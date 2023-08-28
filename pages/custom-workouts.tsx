@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import Layout from "../components/layout";
 import AccessDenied from "../components/access-denied";
-import Header from "../components/header"; // Import your Header component
-import Footer from "../components/footer"; // Import your Footer component
+import Header from "@components/Header"; // Import your Header component
+import Footer from "@components/Footer"; // Import your Footer component
 
 export default function ProtectedPage() {
   const { data: session } = useSession();
-  const [content, setContent] = useState();
+  const [content, setContent] = useState<string | null>(null); // Specify the type as string | null
 
-  const [workouts, setWorkouts] = useState([]);
-  const [newWorkout, setNewWorkout] = useState({
+  const [workouts, setWorkouts] = useState<Array<Workout>>([]); // Specify the type as Array<Workout>
+  const [newWorkout, setNewWorkout] = useState<Workout>({
     name: "",
     workout: "",
     repetitions: 0,

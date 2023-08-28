@@ -1,4 +1,20 @@
-import React, { useState } from 'react';
+
+// This is an example of to protect an API route
+import { getServerSession } from "next-auth/next"
+import { authOptions } from "../auth/[...nextauth]"
+
+import type { NextApiRequest, NextApiResponse } from "next"
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const session = await getServerSession(req, res, authOptions)
+
+  if (session) {
+    return res.send({
+      content:
+        import React, { useState } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
@@ -87,3 +103,11 @@ function CustomWorkoutsPage() {
 }
 
 export default CustomWorkoutsPage;
+
+    })
+  }
+
+  res.send({
+    error: "You must be signed in to view the protected content on this page.",
+  })
+}

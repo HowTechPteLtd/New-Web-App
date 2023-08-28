@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import Layout from "../components/layout";
 import AccessDenied from "../components/access-denied";
-import Header from "../components/Header"; // Import your Header component
-import Footer from "../components/Footer"; // Import your Footer component
+import Header from "../components/header"; // Import your Header component
+import Footer from "../components/footer"; // Import your Footer component
 
 export default function ProtectedPage() {
   const { data: session } = useSession();

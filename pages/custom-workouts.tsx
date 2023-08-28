@@ -65,7 +65,6 @@ export default function ProtectedPage() {
   // If session exists, display content
   return (
     <Layout>
-      <Header title="Custom Workouts" />
       <h1>Custom Workouts</h1>
       <div>
         <input

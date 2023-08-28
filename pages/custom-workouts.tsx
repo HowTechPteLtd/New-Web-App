@@ -5,6 +5,14 @@ import AccessDenied from "../components/access-denied";
 import Header from "../components/header"; // Import your Header component
 import Footer from "../components/footer"; // Import your Footer component
 
+interface Workout {
+  name: string;
+  workout: string;
+  repetitions: number;
+  duration: number;
+}
+
+
 export default function ProtectedPage() {
   const { data: session } = useSession();
   const [content, setContent] = useState<string | null>(null); // Specify the type as string | null

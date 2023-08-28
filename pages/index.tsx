@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import { useRouter } from 'next/router';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { useRouter } from 'next/router'; // Import useRouter for programmatic navigation
 
 export default function Home() {
   const router = useRouter();
@@ -36,13 +36,12 @@ export default function Home() {
           </div>
           <div className="feature-row">
             <button onClick={() => navigateToPage('/pages/profile')}>profile</button>
-            <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button>
+            <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button> 
           </div>
         </div>
       </main>
 
       <Footer />
     </div>
-  );
+  )
 }
-

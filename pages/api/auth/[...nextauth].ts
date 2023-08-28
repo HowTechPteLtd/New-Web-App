@@ -11,8 +11,8 @@ export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers/oauth
   providers: [
     Auth0Provider({
-      clientId: process.env.AUTH0_ID,
-      clientSecret: process.AUTH0_SECRET,
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.CLIENT_SECRET,
       issuer: process.env.AUTH0_ISSUER,
     }),
     FacebookProvider({

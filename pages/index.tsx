@@ -1,8 +1,9 @@
-import Layout from "../components/layout"
+import Layout from "../components/layout";
 import Head from "next/head";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import { useRouter } from 'next/router'; // Import useRouter for programmatic navigation
+import Header from "../components/header"; // Correct the capitalization and file name if needed
+import Footer from "../components/footer"; // Correct the capitalization and file name if needed
+import { useRouter } from 'next/router';
+
 
 export default function Home() {
   const router = useRouter();

@@ -11,8 +11,8 @@ export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers/oauth
   providers: [
     Auth0Provider({
-      clientId: process.env.AUTH0_ID,
-      clientSecret: process.env.AUTH0_SECRET,
+      clientId: process.env.CEOVaisDE3FGJS6jsW0y3LOXpZfsUy6t,
+      clientSecret: process.env.dXPckVx79as832doISvDj_JXCh_59jNMv8Nc2rUbJJ5xs_j85gRwkoE-wsGoCJPc,
       issuer: process.env.AUTH0_ISSUER,
     }),
     FacebookProvider({
@@ -20,8 +20,8 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.FACEBOOK_SECRET,
     }),
     GithubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+      clientId: process.env.Iv1.36cf657c275224f1,
+      clientSecret: process.env.81330291e147b5a998d42c1770b5a5e7eaf548ae,
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,

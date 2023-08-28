@@ -22,6 +22,9 @@ export default function Footer() {
         <li className={styles.navItem}>
           <em>next-auth@{packageJSON.dependencies["next-auth"]}</em>
         </li>
+        <li className={styles.navItem}>
+          <a href="https://gamma.app/public/HowTechPteLtd-eux73w6lxjvbj1m">Website</a>
+        </li>
       </ul>
     </footer>
   )

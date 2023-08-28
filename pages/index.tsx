@@ -1,19 +1,17 @@
-import Layout from "../components/layout";
-import Head from "next/head";
-import Header from "../components/header"; // Correct the capitalization and file name if needed
-import Footer from "../components/footer"; // Correct the capitalization and file name if needed
+import Head from 'next/head';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 import { useRouter } from 'next/router';
 
 export default function Home() {
   const router = useRouter();
 
   // Function to navigate to the specified page
-  const navigateToPage = (page: string) => { // Explicitly specify the type as string
+  const navigateToPage = (page: string) => {
     router.push(page);
   };
 
   return (
-
     <div className="container">
       <Head>
         <title>FitPlanPro</title>
@@ -31,7 +29,6 @@ export default function Home() {
             <button onClick={() => navigateToPage('/goal-setting')}>Goal Setting</button>
             <button onClick={() => navigateToPage('/nutrition-tips')}>Nutrition and Hydration Tips</button>
             <button onClick={() => navigateToPage('/protected')}>Protected</button>
-
           </div>
           <div className="feature-row">
             <button onClick={() => navigateToPage('/ExerciseLibrary')}>Exercise Library</button>
@@ -39,14 +36,13 @@ export default function Home() {
           </div>
           <div className="feature-row">
             <button onClick={() => navigateToPage('/pages/profile')}>profile</button>
-            <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button> 
+            <button onClick={() => navigateToPage('/reminders')}>Reminder and Scheduling</button>
           </div>
-
         </div>
       </main>
 
       <Footer />
     </div>
-  )
+  );
 }
 

@@ -10,10 +10,6 @@ import Auth0Provider from "next-auth/providers/auth0"
 export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers/oauth
   providers: [
-    Auth0Provider({
-      clientId: process.env.CLIENT_ID,
-      clientSecret: process.CLIENT_SECRET,
-      issuer: process.env.AUTH0_ISSUER,
     }),
     FacebookProvider({
       clientId: process.env.FACEBOOK_ID,
